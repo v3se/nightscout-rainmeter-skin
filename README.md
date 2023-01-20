@@ -25,5 +25,3 @@ This skin is using JsonParser 1.0 plugin https://github.com/e2e8/rainmeter-jsonp
 
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
