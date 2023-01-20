@@ -24,19 +24,25 @@ function Update()
     }
     MeasureObject = SKIN:GetMeasure('MeasureBGDelta')
 	MeasureBGDelta = round(MeasureObject:GetValue(), 1)
-    print('Rounded Glucose: ' .. MeasureBGDelta)
-    print(MeasureObject:GetValue())
+    -- print('Rounded Glucose: ' .. MeasureBGDelta)
+    -- print(MeasureObject:GetValue())
     if MeasureBGDelta > 1
     then
-        SKIN:Bang('!SetOption', 'MeterArrow', 'Text', '[\11141]')
+        SKIN:Bang('!SetOption', 'MeterArrow', 'Text', '[\\11141]')
     elseif MeasureBGDelta < -1
     then
-        SKIN:Bang('!SetOption', 'MeterArrow', 'Text', '[\11143]')
+        SKIN:Bang('!SetOption', 'MeterArrow', 'Text', '[\\11143]')
     else
         print(arrows[MeasureBGDelta])
         SKIN:Bang('!SetOption', 'MeterArrow', 'Text', arrows[MeasureBGDelta])
     end
-    SKIN:Bang('!SetOption', 'MeterBGDelta', 'Text', MeasureBGDelta)
+
+    if MeasureBGDelta > 0
+    then
+        SKIN:Bang('!SetOption', 'MeterBGDelta', 'Text', '+' .. MeasureBGDelta)
+    else
+        SKIN:Bang('!SetOption', 'MeterBGDelta', 'Text', MeasureBGDelta)
+    end
 end
 
 function round(num, numDecimalPlaces)
