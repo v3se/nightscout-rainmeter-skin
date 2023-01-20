@@ -4,6 +4,8 @@ This is a Rainmeter skin that is used to retrieve and visualize glucose monitori
 
 ![alt text](https://github.com/vesegluco/nightscout-rainmenter-skin/blob/master/Nightscout-Rainmeter.PNG?raw=true)
 
+Currently supports only mmol/l. The skin retrieves the latest glucose value from the REST API every 5 seconds.
+
 ## Installation
 
 Download newest release and use Rainmeter installer to install the skin. After the installation you need to modify the .ini file variables:
