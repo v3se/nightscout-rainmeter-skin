@@ -28,7 +28,7 @@ function Update()
 
     local unitFactor = tonumber(SKIN:GetVariable('unitFactor')) or 0.0555
 
-    -- Для стрелок всегда приводим к mmol/L
+    -- mmol/L is always used to find the direction of the arrows.
     local arrowDelta = round(displayDelta * (0.0555 / unitFactor), 1)
 
     if arrowDelta > 1 then
